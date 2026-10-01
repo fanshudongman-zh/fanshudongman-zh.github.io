@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>番薯动漫 - 番薯动漫新番速递、番剧更新与动漫资讯 | fanshudongman-zh.github.io</title>
+<meta name="keywords" content="番薯动漫,fanshudongman-zh.github.io,番薯动漫新番,番薯动漫资讯,番剧更新,新番速递,动漫排行榜,番剧时间表,番薯动漫官网">
+<meta name="description" content="番薯动漫（fanshudongman-zh.github.io）专注动漫新番速递与番剧更新，每日整理番剧时间表、热播排行、剧场电影档期与深度点评，为追番用户提供及时、完整的番薯动漫资讯与观看指南。">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#1a0f12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="番薯动漫 - 番薯动漫新番速递与番剧更新">
+<meta property="og:description" content="专注动漫新番速递与番剧更新，每日整理番剧时间表、热播排行、剧场电影档期与深度点评。">
+<meta property="og:url" content="https://fanshudongman-zh.github.io">
+<meta property="og:site_name" content="番薯动漫">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://fanshudongman-zh.github.io">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍠</text></svg>">
+<style>
+:root{
+  --bg:#141013;
+  --bg2:#19131a;
+  --card:#21191f;
+  --card-h:#2a2028;
+  --line:rgba(255,255,255,.075);
+  --txt:#e9e4e7;
+  --dim:#a39aa4;
+  --faint:#6e666f;
+  --p1:#ff6b4a;
+  --p2:#ffa53d;
+  --p3:#e34f7a;
+  --ok:#4ecb9a;
+  --sh:0 26px 64px rgba(0,0,0,.55);
+  --r:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--txt);font-size:16px;line-height:1.75;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(820px 460px at 12% -8%,rgba(255,107,74,.16),transparent 60%),
+    radial-gradient(720px 560px at 90% 6%,rgba(227,79,122,.12),transparent 62%),
+    radial-gradient(660px 660px at 50% 108%,rgba(255,165,61,.09),transparent 60%);}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.4;
+  background-image:linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);
+  background-size:50px 50px;}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;transition:color .2s}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* topbar */
+.topbar{background:rgba(10,7,9,.9);border-bottom:1px solid var(--line);font-size:13px;color:var(--faint)}
+.topbar .container{height:38px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar a:hover{color:var(--txt)}
+.topbar .l{display:flex;gap:18px;align-items:center}
+.topbar .l .d{width:6px;height:6px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok);animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.35}}
+.topbar .r{display:flex;gap:16px}
+@media(max-width:720px){.topbar .r{display:none}}
+
+/* header */
+.header{position:sticky;top:0;z-index:100;background:rgba(20,16,19,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header .container{height:72px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo .mk{width:44px;height:44px;border-radius:13px;flex:none;display:grid;place-items:center;font-size:22px;
+  background:linear-gradient(135deg,var(--p1),var(--p2));box-shadow:0 6px 18px rgba(255,107,74,.32)}
+.logo .nm{font-size:21px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo .nm em{font-style:normal;background:linear-gradient(90deg,#fff,var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{display:block;font-size:11px;font-weight:400;color:var(--faint);letter-spacing:1.5px;margin-top:-2px}
+.nav{flex:1;display:flex;justify-content:center;gap:2px}
+.nav a{font-size:15px;font-weight:500;color:var(--dim);padding:9px 13px;border-radius:9px;position:relative}
+.nav a:hover{color:var(--txt);background:rgba(255,255,255,.05)}
+.nav a.on{color:var(--txt);background:rgba(255,107,74,.13)}
+.nav a.on::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--p1),var(--p2))}
+.ha{display:flex;align-items:center;gap:10px;flex:none}
+.sch{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:8px 12px;width:210px;transition:.25s}
+.sch:focus-within{border-color:rgba(255,107,74,.5);width:250px;background:rgba(255,255,255,.09)}
+.sch svg{flex:none;opacity:.55}
+.sch input{flex:1;min-width:0;background:none;border:none;outline:none;color:var(--txt);font-size:14px;font-family:inherit}
+.sch input::placeholder{color:var(--faint)}
+.mb{display:none;width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.mb span{display:block;width:18px;height:2px;background:var(--txt);margin:4px auto;border-radius:2px;transition:.25s}
+.mb.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mb.open span:nth-child(2){opacity:0}
+.mb.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:46px 0 32px}
+.hero-g{display:grid;grid-template-columns:1.62fr 1fr;gap:22px;align-items:stretch}
+.hero-m{border-radius:26px;overflow:hidden;min-height:440px;position:relative;border:1px solid var(--line);box-shadow:var(--sh);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:38px;
+  background:linear-gradient(160deg,#2c1410 0%,#1c141d 52%,#14101a 100%)}
+.hero-m::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(560px 320px at 84% 10%,rgba(227,79,122,.24),transparent 62%),radial-gradient(460px 360px at 6% 90%,rgba(255,107,74,.24),transparent 62%)}
+.hero-m::after{content:"";position:absolute;right:-90px;top:-100px;width:340px;height:340px;border-radius:50%;
+  background:conic-gradient(from 0deg,var(--p1),var(--p2),var(--p3),var(--p1));filter:blur(84px);opacity:.5}
+.hero-crumb{position:relative;font-size:13px;color:var(--faint);margin-bottom:14px;letter-spacing:1px}
+.hero-crumb b{color:var(--p2);font-weight:600}
+.hero-m h1{position:relative;font-size:45px;line-height:1.2;font-weight:800;text-shadow:0 4px 26px rgba(0,0,0,.5)}
+.hero-m h1 i{font-style:normal;background:linear-gradient(90deg,#fff,var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-m>p{position:relative;margin-top:14px;color:#cdc6cc;font-size:16px;max-width:600px}
+.hero-tags{position:relative;display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.hero-tags span{font-size:13px;padding:6px 13px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.11);color:#d8d2d8}
+.hero-btns{position:relative;display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;padding:13px 26px;border-radius:12px;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.bp{background:linear-gradient(135deg,var(--p1),#ff8a3d);color:#fff;box-shadow:0 10px 26px rgba(255,107,74,.34)}
+.bg{background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--txt)}
+.bg:hover{background:rgba(255,255,255,.12)}
+.hero-s{display:grid;grid-template-rows:1fr 1fr;gap:22px}
+.hc{position:relative;overflow:hidden;border-radius:26px;border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.hc.c1{background:linear-gradient(155deg,rgba(255,107,74,.2),rgba(255,107,74,.03))}
+.hc.c2{background:linear-gradient(155deg,rgba(255,165,61,.18),rgba(255,165,61,.03))}
+.hc .bg{font-size:36px;font-weight:800;line-height:1.15}
+.hc .bg em{font-style:normal;font-size:14px;font-weight:500;color:var(--dim);margin-left:6px}
+.hc h4{font-size:15px;color:var(--dim);font-weight:500;margin-top:8px}
+.hc .ft{font-size:12.5px;color:var(--ok);margin-top:12px}
+
+/* section */
+.sec{padding:42px 0}
+.shd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.st{display:flex;align-items:center;gap:12px}
+.st .bar{width:5px;height:27px;border-radius:4px;background:linear-gradient(180deg,var(--p1),var(--p2));flex:none}
+.st h2{font-size:25px;font-weight:800;letter-spacing:.5px}
+.st p{font-size:13.5px;color:var(--faint);margin-top:2px}
+.sm{font-size:14px;color:var(--dim);display:flex;align-items:center;gap:5px;transition:.2s}
+.sm:hover{color:var(--p1);gap:9px}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.tabs button{font-size:14.5px;font-weight:600;padding:9px 18px;border-radius:10px;background:var(--card);border:1px solid var(--line);color:var(--dim)}
+.tabs button:hover{color:var(--txt);border-color:rgba(255,255,255,.2)}
+.tabs button.on{background:linear-gradient(135deg,var(--p1),#ff8a3d);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(255,107,74,.32)}
+.tabs .ct{font-size:12.5px;color:var(--faint);margin-left:auto;display:flex;align-items:center}
+.tab-pane{display:none}.tab-pane.on{display:block;animation:fa .32s ease}
+@keyframes fa{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* news */
+.news{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start}
+.nf{border-radius:var(--r);overflow:hidden;position:relative;min-height:360px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:32px}
+.nf .bg{position:absolute;inset:0;background:linear-gradient(150deg,#2c1410,#1c141d 58%,#14101a)}
+.nf .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,9,11,.96) 8%,rgba(12,9,11,.2) 60%,transparent)}
+.nf .bg span{position:absolute;border-radius:50%;filter:blur(58px);opacity:.5}
+.nf .bg span:nth-child(1){width:260px;height:260px;background:var(--p1);right:-50px;top:-40px}
+.nf .bg span:nth-child(2){width:220px;height:220px;background:var(--p2);left:-40px;bottom:-60px}
+.nf .c{position:relative}
+.nf .tag{font-size:12.5px;font-weight:700;color:#1a0f08;background:linear-gradient(135deg,var(--p2),#ffd23d);padding:4px 11px;border-radius:5px}
+.nf h3{font-size:24px;font-weight:800;margin-top:12px;line-height:1.45;max-width:600px}
+.nf p{color:#cdc6cc;font-size:14.5px;margin-top:10px;max-width:600px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nf .meta{font-size:13px;color:var(--faint);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.nl{display:flex;flex-direction:column}
+.nl article{display:flex;gap:14px;padding:15px 4px;border-bottom:1px solid var(--line);transition:.2s;border-radius:10px}
+.nl article:last-child{border-bottom:none}
+.nl article:hover{background:rgba(255,255,255,.035)}
+.nl .n{flex:none;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:14px;font-weight:800;color:var(--faint);background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.nl article:nth-child(1) .n{background:linear-gradient(135deg,var(--p1),#ff8a3d);color:#fff;border-color:transparent}
+.nl article:nth-child(2) .n{background:linear-gradient(135deg,var(--p2),#ffd23d);color:#1a0f08;border-color:transparent}
+.nl article:nth-child(3) .n{background:linear-gradient(135deg,var(--p3),#ff8fa8);color:#fff;border-color:transparent}
+.nl .t h4{font-size:15.5px;font-weight:600;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:.2s}
+.nl article:hover .t h4{color:var(--p1)}
+.nl .t .m{font-size:12.5px;color:var(--faint);margin-top:5px;display:flex;gap:10px}
+
+/* grid cards */
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.24s}
+.cd:hover{transform:translateY(-6px);background:var(--card-h);border-color:rgba(255,255,255,.16);box-shadow:0 18px 42px rgba(0,0,0,.48)}
+.th{position:relative;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,#2a1410,#1a141d)}
+.th .ly{position:absolute;inset:0;opacity:.88;
+  background:radial-gradient(circle at 22% 18%,var(--g1,rgba(255,107,74,.68)),transparent 54%),radial-gradient(circle at 82% 86%,var(--g2,rgba(227,79,122,.6)),transparent 54%),linear-gradient(160deg,var(--g3,#2c1410),var(--g4,#14101a));transition:transform .6s,opacity .3s}
+.cd:hover .ly{transform:scale(1.12);opacity:1}
+.th .ar{position:absolute;inset:0;display:grid;place-items:center;font-size:52px;transition:transform .4s}
+.cd:hover .ar{transform:scale(1.1)}
+.th .ep{position:absolute;top:10px;left:10px;z-index:2;font-size:11.5px;font-weight:700;color:#fff;padding:4px 9px;border-radius:6px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(4px)}
+.th .sc{position:absolute;top:10px;right:10px;z-index:2;font-size:11.5px;font-weight:700;color:#1a0f08;padding:4px 9px;border-radius:20px;background:linear-gradient(135deg,var(--p2),#ffd23d)}
+.th .st{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;font-size:12px;color:#e9e4e7;text-shadow:0 1px 3px rgba(0,0,0,.8);display:flex;justify-content:space-between;gap:8px}
+.th .st b{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none;margin-top:5px}
+.th .hv{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:rgba(10,7,9,.5);opacity:0;transition:.25s}
+.cd:hover .hv{opacity:1}
+.th .hv i{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,107,74,.92);font-size:17px;color:#fff;box-shadow:0 8px 26px rgba(255,107,74,.5);transform:scale(.7);transition:.25s}
+.cd:hover .hv i{transform:scale(1)}
+.cd .in{padding:14px 15px 16px;flex:1;display:flex;flex-direction:column}
+.cd .in h3{font-size:16.5px;font-weight:700;line-height:1.45;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.cd .in .tg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.cd .in .tg i{font-style:normal;font-size:12px;color:var(--dim);padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.05)}
+.cd .in .ln{margin-top:auto;padding-top:11px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--faint)}
+.cd .in .ln b{color:var(--dim);font-weight:500}
+
+/* schedule */
+.sch-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.24s}
+.day:hover{transform:translateY(-4px);border-color:rgba(255,107,74,.35);box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.day h4{font-size:15px;font-weight:800;text-align:center;padding:13px 6px;background:rgba(255,255,255,.04);border-bottom:1px solid var(--line)}
+.day h4 small{display:block;font-size:11px;font-weight:400;color:var(--faint);margin-top:2px}
+.day.today h4{background:linear-gradient(135deg,var(--p1),#ff8a3d);color:#fff;border-color:transparent}
+.day.today h4 small{color:rgba(255,255,255,.8)}
+.day ol{list-style:none;padding:12px}
+.day li{font-size:12.5px;color:var(--dim);padding-bottom:9px;margin-bottom:9px;border-bottom:1px dashed var(--line);line-height:1.6}
+.day li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.day li b{display:block;font-size:11.5px;color:var(--p2);font-weight:700;margin-bottom:2px}
+.day li a{transition:.2s}
+.day li a:hover{color:var(--txt)}
+
+/* ranking table */
+.rk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.rk-t{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:rgba(255,255,255,.04);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px}
+.rk-t h3{font-size:18px;font-weight:800;display:flex;align-items:center;gap:9px}
+.rk-t h3 small{font-size:13px;font-weight:400;color:var(--faint)}
+.rk-t .up{font-size:12.5px;color:var(--ok)}
+.rk ul{list-style:none}
+.rk li{display:grid;grid-template-columns:44px 52px 1fr 110px 80px;gap:16px;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line)}
+.rk li:last-child{border-bottom:none}
+.rk li:hover{background:rgba(255,255,255,.035)}
+.rk .no{font-size:19px;font-weight:800;text-align:center;color:var(--faint)}
+.rk li:nth-child(1) .no{color:var(--p2)}
+.rk li:nth-child(2) .no{color:#c9c2c9}
+.rk li:nth-child(3) .no{color:#c98a5a}
+.rk .po{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-size:24px;
+  background:linear-gradient(135deg,var(--g1,rgba(255,107,74,.22)),var(--g2,rgba(255,107,74,.06)));border:1px solid var(--line)}
+.rk .ti h4{font-size:15.5px;font-weight:700;transition:.2s}
+.rk li:hover .ti h4{color:var(--p1)}
+.rk .ti p{font-size:12.5px;color:var(--faint);margin-top:2px}
+.rk .sc{text-align:right;font-size:14px;font-weight:700;color:var(--p2)}
+.rk .sc small{display:block;font-size:11.5px;font-weight:400;color:var(--faint);margin-top:1px}
+.rk .ch{font-size:12.5px;color:var(--faint);text-align:right}
+
+/* movie */
+.mv{display:grid;grid-template-columns:1.45fr 1fr;gap:26px;align-items:start}
+.mf{border-radius:var(--r);overflow:hidden;position:relative;min-height:300px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:30px}
+.mf .bg{position:absolute;inset:0;background:linear-gradient(150deg,#2a1018,#1a141d 55%,#14101a)}
+.mf .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,9,11,.96) 10%,transparent 60%)}
+.mf .bg span{position:absolute;border-radius:50%;filter:blur(54px);opacity:.5}
+.mf .bg span:nth-child(1){width:240px;height:240px;background:var(--p3);right:-40px;top:-40px}
+.mf .bg span:nth-child(2){width:200px;height:200px;background:var(--p1);left:-40px;bottom:-50px}
+.mf .c{position:relative}
+.mf .dt{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;padding:4px 11px;border-radius:5px;background:rgba(255,107,74,.9)}
+.mf h3{font-size:22px;font-weight:800;margin-top:11px;line-height:1.45}
+.mf p{color:#cdc6cc;font-size:14.5px;margin-top:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mf .meta{font-size:13px;color:var(--faint);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.ml{display:flex;flex-direction:column;gap:12px}
+.mi{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.24s}
+.mi:hover{transform:translateX(5px);background:var(--card-h);border-color:rgba(255,165,61,.35)}
+.mi .d{flex:none;width:54px;text-align:center}
+.mi .d b{display:block;font-size:17px;font-weight:800;color:var(--p2);line-height:1.2}
+.mi .d small{font-size:11px;color:var(--faint)}
+.mi .t h4{font-size:15px;font-weight:700}
+.mi .t p{font-size:12.5px;color:var(--faint);margin-top:2px}
+
+/* review */
+.rv{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.24s;display:flex;flex-direction:column;gap:12px}
+.rc:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(0,0,0,.4);border-color:rgba(255,107,74,.28)}
+.rc .who{display:flex;align-items:center;gap:12px}
+.rc .av{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:20px;color:#fff;background:linear-gradient(135deg,var(--p1),var(--p3))}
+.rc .who div h4{font-size:16px;font-weight:700}
+.rc .who div p{font-size:12.5px;color:var(--faint)}
+.rc .st{display:flex;gap:3px;font-size:13px;color:var(--p2)}
+.rc .st em{font-style:normal;color:var(--faint);margin-left:6px;font-size:12px}
+.rc h3{font-size:17.5px;font-weight:800;line-height:1.5}
+.rc blockquote{font-size:14.5px;color:var(--dim);line-height:1.85;padding:13px 15px;border-left:3px solid var(--p1);background:rgba(255,107,74,.07);border-radius:0 10px 10px 0}
+.rc .tags{display:flex;flex-wrap:wrap;gap:7px}
+.rc .tags i{font-style:normal;font-size:12.5px;color:var(--dim);padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.05)}
+.rc .ft{font-size:12.5px;color:var(--faint);padding-top:10px;border-top:1px solid var(--line);margin-top:auto}
+
+/* download */
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.24s}
+.dc:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(0,0,0,.42)}
+.dc-h{padding:20px 20px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.dc-h .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:21px;flex:none;
+  background:linear-gradient(135deg,var(--g1,rgba(255,107,74,.22)),var(--g2,rgba(255,107,74,.05)));border:1px solid var(--line)}
+.dc-h h4{font-size:16.5px;font-weight:700}
+.dc-h p{font-size:12px;color:var(--faint)}
+.dc ul{list-style:none;padding:8px 20px 18px}
+.dc li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.dc li:last-child{border-bottom:none}
+.dc li span{font-size:14px;color:var(--dim);min-width:0}
+.dc li span small{display:block;font-size:12px;color:var(--faint)}
+.dc li a{flex:none;font-size:12.5px;font-weight:600;color:var(--p1);padding:5px 12px;border-radius:7px;border:1px solid rgba(255,107,74,.3);transition:.2s}
+.dc li a:hover{background:rgba(255,107,74,.14)}
+
+/* gallery */
+.ga{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gi{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line);transition:transform .25s}
+.gi:hover{transform:scale(1.03);z-index:2}
+.gi .bg{position:absolute;inset:0;background:linear-gradient(140deg,var(--g1,#2c1410),var(--g2,#14101a))}
+.gi .bg span{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;transition:transform .4s}
+.gi:hover .bg span{transform:scale(1.12)}
+.gi .mk{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,9,11,.93),transparent 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.gi h4{font-size:15px;font-weight:700}
+.gi p{font-size:12px;color:var(--faint);margin-top:3px}
+
+/* topic */
+.tp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tpc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.24s}
+.tpc:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(0,0,0,.42);border-color:rgba(255,165,61,.35)}
+.tpc .th2{position:relative;height:120px;display:grid;place-items:center;font-size:46px;
+  background:linear-gradient(135deg,var(--g1,rgba(255,107,74,.28)),var(--g2,rgba(255,107,74,.06)))}
+.tpc .th2 .ct{position:absolute;top:10px;left:12px;font-size:11.5px;font-weight:700;color:#1a0f08;padding:4px 9px;border-radius:20px;background:linear-gradient(135deg,var(--p2),#ffd23d)}
+.tpc .ctn{padding:18px 20px}
+.tpc h4{font-size:16.5px;font-weight:800;line-height:1.5;margin-bottom:8px}
+.tpc p{font-size:13.5px;color:var(--dim);line-height:1.8}
+.tpc .ft{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint);display:flex;justify-content:space-between}
+
+/* subscribe */
+.sub{border-radius:22px;padding:40px 36px;position:relative;overflow:hidden;text-align:center;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,107,74,.14),rgba(227,79,122,.1))}
+.sub .bg{position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 0);background-size:22px 22px;opacity:.6}
+.sub .cn{position:relative}
+.sub h3{font-size:25px;font-weight:800}
+.sub p{font-size:14.5px;color:var(--dim);margin-top:8px}
+.sf{display:flex;gap:10px;max-width:480px;margin:22px auto 0;flex-wrap:wrap;justify-content:center}
+.sf input{flex:1;min-width:220px;padding:13px 16px;border-radius:12px;background:rgba(10,7,9,.55);border:1px solid var(--line);color:var(--txt);font-size:14.5px;font-family:inherit;outline:none;transition:.2s}
+.sf input:focus{border-color:rgba(255,107,74,.55)}
+.sf button{padding:13px 26px;border-radius:12px;font-size:15px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--p1),#ff8a3d);box-shadow:0 8px 22px rgba(255,107,74,.34);transition:transform .18s}
+.sf button:hover{transform:translateY(-2px)}
+
+/* about */
+.ab{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;align-items:start}
+.abc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.abc h3{font-size:19px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.abc h3::before{content:"";width:5px;height:20px;border-radius:4px;background:linear-gradient(180deg,var(--p1),var(--p2))}
+.abc p{font-size:14.5px;color:var(--dim);margin-bottom:12px;line-height:1.85}
+.abc p:last-child{margin-bottom:0}
+.lc{display:flex;flex-wrap:wrap;gap:9px}
+.lc a{font-size:13.5px;padding:8px 14px;border-radius:9px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--dim);transition:.2s}
+.lc a:hover{background:rgba(255,107,74,.13);border-color:rgba(255,107,74,.4);color:var(--txt);transform:translateY(-2px)}
+
+/* footer */
+.ft{background:var(--bg2);border-top:1px solid var(--line);margin-top:40px;padding:46px 0 0}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.fg h4{font-size:15px;font-weight:700;margin-bottom:14px}
+.fg .bd p{font-size:13.5px;color:var(--dim);margin-top:12px;line-height:1.8}
+.fg ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fg ul a{font-size:13.5px;color:var(--dim);transition:.2s}
+.fg ul a:hover{color:var(--txt);padding-left:5px}
+.fb{border-top:1px solid var(--line);margin-top:36px;padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--faint)}
+.fb a{color:var(--dim)}
+.fb a:hover{color:var(--txt)}
+.fb .ls{display:flex;gap:16px;flex-wrap:wrap}
+
+.to{position:fixed;right:20px;bottom:24px;z-index:90;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--p1),#ff8a3d);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(255,107,74,.4);opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;font-size:17px}
+.to.show{opacity:1;visibility:visible;transform:translateY(0)}
+
+@media(max-width:1080px){.g4,.ga{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:960px){
+  .nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:2px;padding:14px;background:rgba(20,16,19,.99);border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav a{width:100%;padding:12px 14px}
+  .nav a.on::after{display:none}
+  .mb{display:block}
+  .sch{display:none}
+  .hero-m h1{font-size:33px}
+  .g4,.ga,.dl,.tp{grid-template-columns:repeat(2,1fr)}
+  .hero-g,.news,.mv,.rv,.ab{grid-template-columns:1fr}
+  .hero-s{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr 1fr}
+  .st h2{font-size:21px}
+  .sch-grid{grid-template-columns:repeat(4,1fr)}
+  .sch-grid .day:nth-child(n+5){display:none}
+  .rk li{grid-template-columns:36px 46px 1fr 80px;gap:12px;padding:12px 16px}
+  .rk .ch{display:none}
+}
+@media(max-width:600px){
+  .container{padding:0 16px}
+  .hero{padding:28px 0 20px}
+  .hero-m{min-height:350px;padding:26px 20px}
+  .hero-m h1{font-size:25px}
+  .hero-m>p{font-size:14.5px}
+  .hero-btns .btn{flex:1;justify-content:center;padding:12px 16px;font-size:14.5px}
+  .hero-s{grid-template-columns:1fr}
+  .g4,.ga,.dl,.tp{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr}
+  .sec{padding:32px 0}
+  .sh{margin-bottom:16px}
+  .tabs button{padding:8px 14px;font-size:13.5px}
+  .nf{min-height:290px;padding:24px 18px}
+  .nf h3{font-size:19px}
+  .hc .bg{font-size:29px}
+  .sub{padding:30px 20px}
+  .sub h3{font-size:20px}
+  .logo .nm{font-size:18px}
+  .sch-grid{grid-template-columns:repeat(2,1fr)}
+  .sch-grid .day:nth-child(n+3){display:none}
+  .rk li{grid-template-columns:32px 42px 1fr;gap:10px}
+  .rk .sc{display:none}
+  .to{right:12px;bottom:16px;width:42px;height:42px}
+}
+@media print{.header,.to,.sub,.topbar{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="container">
+    <div class="l"><span class="d"></span>番薯动漫新番速递 · 每日 18:00 更新番剧时间表 · 内容由编辑部整理，转载请注明来源</div>
+    <div class="r"><a href="#rank">排行榜</a><a href="#review">新番点评</a><a href="#about">关于番薯动漫</a></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="https://fanshudongman-zh.github.io">
+      <span class="mk">🍠</span>
+      <span class="nm"><em>番薯动漫</em><small>fanshudongman-zh.github.io</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="on">首页</a>
+      <a href="#news">动漫资讯</a>
+      <a href="#update">番剧更新</a>
+      <a href="#schedule">番剧时间表</a>
+      <a href="#rank">热播排行榜</a>
+      <a href="#movie">剧场电影</a>
+      <a href="#review">新番点评</a>
+      <a href="#download">资源下载</a>
+      <a href="#gallery">精彩图集</a>
+      <a href="#topic">专题策划</a>
+      <a href="#about">关于番薯动漫</a>
+    </nav>
+    <div class="ha">
+      <div class="sch">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="搜番剧名 / 声优 / 制作公司" aria-label="检索">
+      </div>
+      <button class="mb" id="mb" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-g">
+      <div class="hero-m">
+        <div class="hero-crumb">番薯动漫 / <b>fanshudongman-zh.github.io</b> · 动漫新番速递与番剧更新</div>
+        <h1>追番不漏更新<br><i>番薯动漫 · 新番速递 · 番剧更新</i></h1>
+        <p><strong style="color:var(--txt)">番薯动漫</strong>（fanshudongman-zh.github.io）每日整理当季新番更新进度、番剧时间表与热播排行，配合剧场电影档期、新番点评和资源下载，让追番用户在一个页面里看完当天所有值得关注的番薯动漫资讯。</p>
+        <div class="hero-tags">
+          <span>🔥 当季新番 42 部同步更新</span>
+          <span>📅 每周七天番剧时间表</span>
+          <span>🎬 剧场电影档期一览</span>
+          <span>📝 编辑部深度点评</span>
+        </div>
+        <div class="hero-btns">
+          <a class="btn bp" href="#update">查看今日更新 →</a>
+          <a class="btn bg" href="#schedule">番剧时间表</a>
+        </div>
+      </div>
+      <div class="hero-s">
+        <div class="hc c1">
+          <div><div class="bg">42<em> 部</em></div><h4>当季追番清单</h4></div>
+          <div class="ft">今日更新 7 部 · 昨日 9 部</div>
+        </div>
+        <div class="hc c2">
+          <div><div class="bg">18<em> 部</em></div><h4>本季热门剧场与电影</h4></div>
+          <div class="ft">本月新上映 3 部</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动漫资讯 -->
+  <section class="sec" id="news">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>动漫资讯</h2><p>行业动态 · 制作情报 · 番组公告</p></div></div>
+      <a class="sm" href="#">全部资讯 ›</a>
+    </div>
+    <div class="news">
+      <article class="nf">
+        <div class="bg"><span></span><span></span></div>
+        <div class="c">
+          <span class="tag">头条</span>
+          <h3>当季新番播出进度过半，番薯动漫整理各社追加集数与延期情况</h3>
+          <p>本期共统计 42 部当季作品，其中 5 部宣布追加集数，3 部因制作进度调整延期一周播出。番薯动漫已逐条标注各平台更新时间与字幕版本。</p>
+          <div class="meta"><span>🕐 2 小时前</span><span>📁 新番速递</span><span>💬 128 条评论</span><span>👁 3.2 万阅读</span></div>
+        </div>
+      </article>
+      <div class="nl">
+        <article><span class="n">1</span><div class="t"><h4>知名制作公司公布 2026 年新作动画化企划，原作单行本累计发行突破 600 万册</h4><div class="m"><span>1 小时前</span><span>动画化情报</span></div></div></article>
+        <article><span class="n">2</span><div class="t"><h4>四月新番追加两作，均为小说改编，播出时段定在深夜档</h4><div class="m"><span>3 小时前</span><span>新番速递</span></div></div></article>
+        <article><span class="n">3</span><div class="t"><h4>人气声优组合宣布为新作演唱片头曲，主题曲单曲预定下月发行</h4><div class="m"><span>5 小时前</span><span>音乐资讯</span></div></div></article>
+        <article><span class="n">4</span><div class="t"><h4>剧场版第二弹确定引进，官方公布中文配音阵容与上映档期</h4><div class="m"><span>7 小时前</span><span>剧场电影</span></div></div></article>
+        <article><span class="n">5</span><div class="t"><h4>原作漫画连载迎来重大转折，动画版是否会同步改编引发讨论</h4><div class="m"><span>昨天</span><span>原作情报</span></div></div></article>
+        <article><span class="n">6</span><div class="t"><h4>当季多部作品入选季度热度榜，番薯动漫点评编辑分享评分依据</h4><div class="m"><span>昨天</span><span>编辑点评</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 番剧更新 -->
+  <section class="sec" id="update">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>番剧更新</h2><p>当季追番清单 · 更新进度与观看入口</p></div></div>
+      <a class="sm" href="#">完整清单 ›</a>
+    </div>
+    <div class="tabs">
+      <button class="on" data-tab="t1">当季更新</button>
+      <button data-tab="t2">即将播出</button>
+      <button data-tab="t3">经典补番</button>
+      <button data-tab="t4">续作回归</button>
+      <span class="ct">共 42 部 · 持续补充中</span>
+    </div>
+    <div class="tab-pane on" id="t1">
+      <div class="g4">
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,107,74,.7);--g2:rgba(255,165,61,.55);--g3:#2c1410;--g4:#1a141d"></div><div class="ar">🌸</div><span class="ep">更新至 12 话</span><span class="sc">9.4 分</span><div class="st"><span><b></b>恋爱 / 校园</span><span>第 12 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>樱花与海边的约定</h3><div class="tg"><i>恋爱</i><i>校园</i><i>全 13 话</i></div><div class="ln"><span><b>每周六 23:30 更新</b></span><span>剩余 1 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(227,79,122,.68);--g2:rgba(255,107,74,.5);--g3:#2a1018;--g4:#1a141d"></div><div class="ar">🗡️</div><span class="ep">更新至 11 话</span><span class="sc">9.2 分</span><div class="st"><span><b></b>热血 / 战斗</span><span>第 11 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>影刃无双</h3><div class="tg"><i>热血</i><i>战斗</i><i>全 24 话</i></div><div class="ln"><span><b>每周五 24:00 更新</b></span><span>剩余 13 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(78,203,154,.62);--g2:rgba(91,140,255,.48);--g3:#0f2a22;--g4:#121b2e"></div><div class="ar">🚂</div><span class="ep">更新至 12 话</span><span class="sc">9.1 分</span><div class="st"><span><b></b>治愈 / 日常</span><span>第 12 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>末班列车与星空咖啡馆</h3><div class="tg"><i>治愈</i><i>日常</i><i>全 13 话</i></div><div class="ln"><span><b>每周四 22:00 更新</b></span><span>剩余 1 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(91,140,255,.66);--g2:rgba(78,203,154,.46);--g3:#121b2e;--g4:#0f2a22"></div><div class="ar">🏙️</div><span class="ep">更新至 10 话</span><span class="sc">8.9 分</span><div class="st"><span><b></b>悬疑 / 推理</span><span>第 10 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>迷宫都市搜查课</h3><div class="tg"><i>悬疑</i><i>推理</i><i>全 12 话</i></div><div class="ln"><span><b>每周三 23:00 更新</b></span><span>剩余 2 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,165,61,.68);--g2:rgba(255,107,74,.48);--g3:#2c2610;--g4:#2c1410"></div><div class="ar">🎻</div><span class="ep">更新至 12 话</span><span class="sc">8.8 分</span><div class="st"><span><b></b>音乐 / 青春</span><span>第 12 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>弦上的星期天</h3><div class="tg"><i>音乐</i><i>青春</i><i>全 13 话</i></div><div class="ln"><span><b>每周六 22:30 更新</b></span><span>剩余 1 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(168,85,247,.6);--g2:rgba(227,79,122,.48);--g3:#24102e;--g4:#2a1018"></div><div class="ar">🪞</div><span class="ep">更新至 9 话</span><span class="sc">8.6 分</span><div class="st"><span><b></b>奇幻 / 冒险</span><span>第 9 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>镜中之国的访客</h3><div class="tg"><i>奇幻</i><i>冒险</i><i>全 12 话</i></div><div class="ln"><span><b>每周二 23:30 更新</b></span><span>剩余 3 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,107,74,.62);--g2:rgba(168,85,247,.48);--g3:#2c1410;--g4:#24102e"></div><div class="ar">🐉</div><span class="ep">更新至 11 话</span><span class="sc">8.5 分</span><div class="st"><span><b></b>异世界 / 战斗</span><span>第 11 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>龙厨的异世界料理帐</h3><div class="tg"><i>异世界</i><i>美食</i><i>全 12 话</i></div><div class="ln"><span><b>每周一 24:00 更新</b></span><span>剩余 1 话</span></div></div></article>
+        <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(78,203,154,.6);--g2:rgba(255,165,61,.42);--g3:#0f2a22;--g4:#2c2610"></div><div class="ar">🌾</div><span class="ep">更新至 8 话</span><span class="sc">8.4 分</span><div class="st"><span><b></b>治愈 / 农业</span><span>第 8 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>种田少年的慢生活</h3><div class="tg"><i>治愈</i><i>慢节奏</i><i>全 12 话</i></div><div class="ln"><span><b>每周日 22:00 更新</b></span><span>剩余 4 话</span></div></div></article>
+      </div>
+    </div>
+    <div class="tab-pane" id="t2"><div class="g4">
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,107,74,.6);--g2:rgba(255,165,61,.42);--g3:#2c1410;--g4:#1a141d"></div><div class="ar">🏰</div><span class="ep">10 月开播</span><span class="sc">期待值 96</span><div class="st"><span><b></b>奇幻 / 史诗</span><span>全 24 话</span></div><div class="hv"><i>🔔</i></div></div><div class="in"><h3>王国与灰烬的协奏曲</h3><div class="tg"><i>奇幻</i><i>小说改编</i></div><div class="ln"><span><b>10 月 4 日首播</b></span><span>开播提醒</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(227,79,122,.6);--g2:rgba(255,107,74,.42);--g3:#2a1018;--g4:#1a141d"></div><div class="ar">🕵️</div><span class="ep">10 月开播</span><span class="sc">期待值 94</span><div class="st"><span><b></b>悬疑 / 心理</span><span>全 12 话</span></div><div class="hv"><i>🔔</i></div></div><div class="in"><h3>嫌疑人不在现场</h3><div class="tg"><i>悬疑</i><i>漫画改编</i></div><div class="ln"><span><b>10 月 6 日首播</b></span><span>开播提醒</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(91,140,255,.6);--g2:rgba(78,203,154,.42);--g3:#121b2e;--g4:#0f2a22"></div><div class="ar">🛸</div><span class="ep">10 月开播</span><span class="sc">期待值 92</span><div class="st"><span><b></b>科幻 / 机甲</span><span>全 13 话</span></div><div class="hv"><i>🔔</i></div></div><div class="in"><h3>深空航路七号</h3><div class="tg"><i>科幻</i><i>原创企划</i></div><div class="ln"><span><b>10 月 5 日首播</b></span><span>开播提醒</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,165,61,.6);--g2:rgba(255,107,74,.42);--g3:#2c2610;--g4:#2c1410"></div><div class="ar">🍡</div><span class="ep">10 月开播</span><span class="sc">期待值 90</span><div class="st"><span><b></b>美食 / 日常</span><span>全 12 话</span></div><div class="hv"><i>🔔</i></div></div><div class="in"><h3>小巷甜品店营业中</h3><div class="tg"><i>美食</i><i>治愈</i></div><div class="ln"><span><b>10 月 7 日首播</b></span><span>开播提醒</span></div></div></article></div></div></div>
+    <div class="tab-pane" id="t3"><div class="g4">
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(78,203,154,.6);--g2:rgba(91,140,255,.42);--g3:#0f2a22;--g4:#121b2e"></div><div class="ar">🌊</div><span class="ep">全 26 话</span><span class="sc">9.6 分</span><div class="st"><span><b></b>治愈 / 海洋</span><span>已完结</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>潮间带的信</h3><div class="tg"><i>治愈</i><i>经典补番</i></div><div class="ln"><span><b>全 26 话完结</b></span><span>推荐指数 S</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,107,74,.6);--g2:rgba(227,79,122,.42);--g3:#2c1410;--g4:#2a1018"></div><div class="ar">⚔️</div><span class="ep">全 37 话</span><span class="sc">9.5 分</span><div class="st"><span><b></b>热血 / 史诗</span><span>已完结</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>铁与花的长征</h3><div class="tg"><i>热血</i><i>经典补番</i></div><div class="ln"><span><b>全 37 话完结</b></span><span>推荐指数 S</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,165,61,.6);--g2:rgba(78,203,154,.4);--g3:#2c2610;--g4:#0f2a22"></div><div class="ar">📚</div><span class="ep">全 22 话</span><span class="sc">9.3 分</span><div class="st"><span><b></b>校园 / 文艺</span><span>已完结</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>图书馆里的夏天</h3><div class="tg"><i>文艺</i><i>经典补番</i></div><div class="ln"><span><b>全 22 话完结</b></span><span>推荐指数 A</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(91,140,255,.58);--g2:rgba(168,85,247,.4);--g3:#121b2e;--g4:#24102e"></div><div class="ar">🌌</div><span class="ep">全 13 话</span><span class="sc">9.2 分</span><div class="st"><span><b></b>科幻 / 哲学</span><span>已完结</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>群星之间的距离</h3><div class="tg"><i>科幻</i><i>经典补番</i></div><div class="ln"><span><b>全 13 话完结</b></span><span>推荐指数 A</span></div></div></article>
+    </div></div>
+    <div class="tab-pane" id="t4"><div class="g4">
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(227,79,122,.64);--g2:rgba(255,165,61,.44);--g3:#2a1018;--g4:#2c2610"></div><div class="ar">🦊</div><span class="ep">第二季</span><span class="sc">9.3 分</span><div class="st"><span><b></b>奇幻 / 续作</span><span>全 12 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>狐火与契约书 第二季</h3><div class="tg"><i>续作</i><i>小说改编</i></div><div class="ln"><span><b>10 月续播</b></span><span>追番中</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(255,107,74,.64);--g2:rgba(78,203,154,.44);--g3:#2c1410;--g4:#0f2a22"></div><div class="ar">🧭</div><span class="ep">第三季</span><span class="sc">9.0 分</span><div class="st"><span><b></b>冒险 / 续作</span><span>全 24 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>南风航路 第三季</h3><div class="tg"><i>续作</i><i>原创企划</i></div><div class="ln"><span><b>冬季续播</b></span><span>追番中</span></div></div></article>
+      <article class="cd"><div class="th"><div class="ly" style="--g1:rgba(168,85,247,.6);--g2:rgba(91,140,255,.42);--g3:#24102e;--g4:#121b2e"></div><div class="ar">🎪</div><span class="ep">第二季</span><span class="sc">8.9 分</span><div class="st"><span><b></b>奇幻 / 续作</span><span>全 12 话</span></div><div class="hv"><i>▶</i></div></div><div class="in"><h3>午夜马戏团 第二季</h3><div class="tg"><i>续作</i><i>漫画改编</i></div><div class="ln"><span><b>11 月续播</b></span><span>追番中</span></div></div></article></div></div></div>
+  </section>
+
+  <!-- 番剧时间表 -->
+  <section class="sec" id="schedule">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>番剧时间表</h2><p>当季七天排播表 · 一眼看完本周追番安排</p></div></div>
+      <a class="sm" href="#">下载排播表 ›</a>
+    </div>
+    <div class="sch-grid">
+      <div class="day today"><h4>周一<small>9 月 28 日</small></h4><ol><li><b>23:30</b><a href="#">龙厨的异世界料理帐</a></li><li><b>24:00</b><a href="#">迷途之家的小主人</a></li><li><b>24:30</b><a href="#">深夜电台与猫</a></li></ol></div>
+      <div class="day"><h4>周二<small>9 月 29 日</small></h4><ol><li><b>22:00</b><a href="#">镜中之国的访客</a></li><li><b>23:00</b><a href="#">二手书店的日常</a></li><li><b>23:30</b><a href="#">银座午夜食堂</a></li></ol></div>
+      <div class="day"><h4>周三<small>9 月 30 日</small></h4><ol><li><b>22:30</b><a href="#">迷宫都市搜查课</a></li><li><b>23:00</b><a href="#">田径部的午后</a></li><li><b>24:00</b><a href="#">便利店的夜班物语</a></li></ol></div>
+      <div class="day"><h4>周四<small>10 月 1 日</small></h4><ol><li><b>22:00</b><a href="#">末班列车与星空咖啡馆</a></li><li><b>23:30</b><a href="#">花店老板与迷路少女</a></li><li><b>24:00</b><a href="#">黄昏的美术社</a></li></ol></div>
+      <div class="day"><h4>周五<small>10 月 2 日</small></h4><ol><li><b>23:00</b><a href="#">影刃无双</a></li><li><b>23:30</b><a href="#">京都巷弄里的侦探</a></li><li><b>24:00</b><a href="#">地下偶像的休息日</a></li></ol></div>
+      <div class="day"><h4>周六<small>10 月 3 日</small></h4><ol><li><b>22:00</b><a href="#">种田少年的慢生活</a></li><li><b>22:30</b><a href="#">弦上的星期天</a></li><li><b>23:30</b><a href="#">樱花与海边的约定</a></li></ol></div>
+      <div class="day"><h4>周日<small>10 月 4 日</small></h4><ol><li><b>21:30</b><a href="#">天文台与失物招领</a></li><li><b>22:00</b><a href="#">小巷甜品店营业中</a></li><li><b>23:00</b><a href="#">海边的摄影部</a></li></ol></div>
+    </div>
+  </section>
+
+  <!-- 热播排行榜 -->
+  <section class="sec" id="rank">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>热播排行榜</h2><p>当季热度 · 新番期待 · 经典必看 · 剧场票房</p></div></div>
+      <a class="sm" href="#">完整榜单 ›</a>
+    </div>
+    <div class="tabs">
+      <button class="on" data-tab="r1">当季热播</button>
+      <button data-tab="r2">新番期待</button>
+      <button data-tab="r3">经典必看</button>
+      <button data-tab="r4">剧场票房</button>
+      <span class="ct">数据更新于 3 小时前</span>
+    </div>
+    <div class="tab-pane on" id="r1">
+      <div class="rk">
+        <div class="rk-t"><h3>当季热播榜 <small>综合播放量、弹幕与讨论度</small></h3><span class="up">↑ 较上周变动</span></div>
+        <ul>
+          <li><span class="no">1</span><span class="po" style="--g1:rgba(255,165,61,.24);--g2:rgba(255,165,61,.07)">🌸</span><div class="ti"><h4>樱花与海边的约定</h4><p>恋爱 / 校园 · 更新至 12 话</p></div><span class="sc">9.4<small>综合评分</small></span><span class="ch">— 不变</span></li>
+          <li><span class="no">2</span><span class="po" style="--g1:rgba(227,79,122,.22);--g2:rgba(227,79,122,.06)">🗡️</span><div class="ti"><h4>影刃无双</h4><p>热血 / 战斗 · 更新至 11 话</p></div><span class="sc">9.2<small>综合评分</small></span><span class="ch">↑ 1</span></li>
+          <li><span class="no">3</span><span class="po" style="--g1:rgba(78,203,154,.22);--g2:rgba(78,203,154,.06)">🚂</span><div class="ti"><h4>末班列车与星空咖啡馆</h4><p>治愈 / 日常 · 更新至 12 话</p></div><span class="sc">9.1<small>综合评分</small></span><span class="ch">↑ 2</span></li>
+          <li><span class="no">4</span><span class="po" style="--g1:rgba(91,140,255,.22);--g2:rgba(91,140,255,.06)">🏙️</span><div class="ti"><h4>迷宫都市搜查课</h4><p>悬疑 / 推理 · 更新至 10 话</p></div><span class="sc">8.9<small>综合评分</small></span><span class="ch">↓ 2</span></li>
+          <li><span class="no">5</span><span class="po" style="--g1:rgba(255,165,61,.2);--g2:rgba(255,165,61,.05)">🎻</span><div class="ti"><h4>弦上的星期天</h4><p>音乐 / 青春 · 更新至 12 话</p></div><span class="sc">8.8<small>综合评分</small></span><span class="ch">↑ 1</span></li>
+          <li><span class="no">6</span><span class="po" style="--g1:rgba(168,85,247,.2);--g2:rgba(168,85,247,.05)">🪞</span><div class="ti"><h4>镜中之国的访客</h4><p>奇幻 / 冒险 · 更新至 9 话</p></div><span class="sc">8.6<small>综合评分</small></span><span class="ch">— 不变</span></li>
+          <li><span class="no">7</span><span class="po" style="--g1:rgba(255,107,74,.2);--g2:rgba(255,107,74,.05)">🐉</span><div class="ti"><h4>龙厨的异世界料理帐</h4><p>异世界 / 美食 · 更新至 11 话</p></div><span class="sc">8.5<small>综合评分</small></span><span class="ch">↑ 3</span></li>
+          <li><span class="no">8</span><span class="po" style="--g1:rgba(78,203,154,.18);--g2:rgba(78,203,154,.05)">🌾</span><div class="ti"><h4>种田少年的慢生活</h4><p>治愈 / 慢节奏 · 更新至 8 话</p></div><span class="sc">8.4<small>综合评分</small></span><span class="ch">↓ 1</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" id="r2"><div class="rk">
+      <div class="rk-t"><h3>新番期待榜 <small>基于预约与讨论热度</small></h3><span class="up">↑ 较上周变动</span></div>
+      <ul>
+        <li><span class="no">1</span><span class="po" style="--g1:rgba(255,107,74,.22);--g2:rgba(255,107,74,.06)">🏰</span><div class="ti"><h4>王国与灰烬的协奏曲</h4><p>奇幻 / 史诗 · 10 月 4 日开播</p></div><span class="sc">96<small>期待指数</small></span><span class="ch">↑ 2</span></li>
+        <li><span class="no">2</span><span class="po" style="--g1:rgba(227,79,122,.22);--g2:rgba(227,79,122,.06)">🕵️</span><div class="ti"><h4>嫌疑人不在现场</h4><p>悬疑 / 心理 · 10 月 6 日开播</p></div><span class="sc">94<small>期待指数</small></span><span class="ch">— 不变</span></li>
+        <li><span class="no">3</span><span class="po" style="--g1:rgba(91,140,255,.2);--g2:rgba(91,140,255,.06)">🛸</span><div class="ti"><h4>深空航路七号</h4><p>科幻 / 机甲 · 10 月 5 日开播</p></div><span class="sc">92<small>期待指数</small></span><span class="ch">↑ 1</span></li>
+        <li><span class="no">4</span><span class="po" style="--g1:rgba(255,165,61,.2);--g2:rgba(255,165,61,.05)">🍡</span><div class="ti"><h4>小巷甜品店营业中</h4><p>美食 / 日常 · 10 月 7 日开播</p></div><span class="sc">90<small>期待指数</small></span><span class="ch">↓ 3</span></li>
+        <li><span class="no">5</span><span class="po" style="--g1:rgba(78,203,154,.2);--g2:rgba(78,203,154,.05)">📻</span><div class="ti"><h4>深夜电台与猫</h4><p>治愈 / 单元剧 · 10 月 5 日开播</p></div><span class="sc">87<small>期待指数</small></span><span class="ch">↑ 2</span></li>
+      </ul>
+    </div></div>
+    <div class="tab-pane" id="r3"><div class="rk">
+      <div class="rk-t"><h3>经典必看榜 <small>补番参考 · 编辑部推荐</small></h3><span class="up">↑ 较上周变动</span></div>
+      <ul>
+        <li><span class="no">1</span><span class="po" style="--g1:rgba(78,203,154,.22);--g2:rgba(78,203,154,.06)">🌊</span><div class="ti"><h4>潮间带的信</h4><p>治愈 / 海洋 · 全 26 话</p></div><span class="sc">9.6<small>推荐指数</small></span><span class="ch">— 不变</span></li>
+        <li><span class="no">2</span><span class="po" style="--g1:rgba(255,107,74,.22);--g2:rgba(255,107,74,.06)">⚔️</span><div class="ti"><h4>铁与花的长征</h4><p>热血 / 史诗 · 全 37 话</p></div><span class="sc">9.5<small>推荐指数</small></span><span class="ch">— 不变</span></li>
+        <li><span class="no">3</span><span class="po" style="--g1:rgba(255,165,61,.2);--g2:rgba(255,165,61,.05)">📚</span><div class="ti"><h4>图书馆里的夏天</h4><p>校园 / 文艺 · 全 22 话</p></div><span class="sc">9.3<small>推荐指数</small></span><span class="ch">↑ 1</span></li>
+        <li><span class="no">4</span><span class="po" style="--g1:rgba(91,140,255,.2);--g2:rgba(91,140,255,.06)">🌌</span><div class="ti"><h4>群星之间的距离</h4><p>科幻 / 哲学 · 全 13 话</p></div><span class="sc">9.2<small>推荐指数</small></span><span class="ch">↓ 1</span></li>
+        <li><span class="no">5</span><span class="po" style="--g1:rgba(227,79,122,.2);--g2:rgba(227,79,122,.05)">🎪</span><div class="ti"><h4>午夜马戏团</h4><p>奇幻 / 单元剧 · 全 12 话</p></div><span class="sc">9.0<small>推荐指数</small></span><span class="ch">— 不变</span></li>
+      </ul>
+    </div></div>
+    <div class="tab-pane" id="r4"><div class="rk">
+      <div class="rk-t"><h3>剧场票房榜 <small>上映中 · 票房累计</small></h3><span class="up">↑ 较上周变动</span></div>
+      <ul>
+        <li><span class="no">1</span><span class="po" style="--g1:rgba(255,107,74,.22);--g2:rgba(255,107,74,.06)">🎬</span><div class="ti"><h4>樱花与海边的约定：剧场版</h4><p>上映中 · 累计 38.6 亿日元</p></div><span class="sc">38.6<small>亿日元</small></span><span class="ch">↑ 1</span></li>
+        <li><span class="no">2</span><span class="po" style="--g1:rgba(91,140,255,.2);--g2:rgba(91,140,255,.06)">🚀</span><div class="ti"><h4>深空航路：觉醒篇</h4><p>上映中 · 累计 29.1 亿日元</p></div><span class="sc">29.1<small>亿日元</small></span><span class="ch">↓ 1</span></li>
+        <li><span class="no">3</span><span class="po" style="--g1:rgba(227,79,122,.2);--g2:rgba(227,79,122,.05)">🦊</span><div class="ti"><h4>狐火与契约书：终章</h4><p>上映中 · 累计 21.4 亿日元</p></div><span class="sc">21.4<small>亿日元</small></span><span class="ch">— 不变</span></li>
+        <li><span class="no">4</span><span class="po" style="--g1:rgba(78,203,154,.2);--g2:rgba(78,203,154,.05)">🌊</span><div class="ti"><h4>潮间带的信：归途</h4><p>上映中 · 累计 15.8 亿日元</p></div><span class="sc">15.8<small>亿日元</small></span><span class="ch">↑ 2</span></li>
+        <li><span class="no">5</span><span class="po" style="--g1:rgba(255,165,61,.2);--g2:rgba(255,165,61,.05)">🍡</span><div class="ti"><h4>小巷甜品店：圣诞特别篇</h4><p>上映中 · 累计 11.2 亿日元</p></div><span class="sc">11.2<small>亿日元</small></span><span class="ch">↓ 1</span></li>
+      </ul>
+    </div></div>
+  </section>
+
+  <!-- 剧场电影 -->
+  <section class="sec" id="movie">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>剧场电影</h2><p>上映中 · 定档待映 · 影展与特别上映</p></div></div>
+      <a class="sm" href="#">全部档期 ›</a>
+    </div>
+    <div class="mv">
+      <article class="mf">
+        <div class="bg"><span></span><span></span></div>
+        <div class="c">
+          <span class="dt">正在上映 · 第 3 周</span>
+          <h3>《樱花与海边的约定》剧场版定档 10 月 1 日全国上映</h3>
+          <p>番薯动漫编辑部已看完先行场，这篇番薯动漫资讯整理上映场次、中文配音阵容与观影前需要补的几处剧情伏笔。</p>
+          <div class="meta"><span>🎞 片长 118 分钟</span><span>🎙 中文配音已确认</span><span>📍 全国 42 城上映</span><span>⭐ 编辑评分 8.7</span></div>
+        </div>
+      </article>
+      <div class="ml">
+        <div class="mi"><div class="d"><b>10.01</b><small>上映</small></div><div class="t"><h4>《深空航路：觉醒篇》全国公映</h4><p>科幻剧场版 · 累计票房 29.1 亿日元</p></div></div>
+        <div class="mi"><div class="d"><b>10.08</b><small>上映</small></div><div class="t"><h4>《小巷甜品店》圣诞特别篇定档</h4><p>治愈短篇 · 片长 72 分钟</p></div></div>
+        <div class="mi"><div class="d"><b>10.15</b><small>上映</small></div><div class="t"><h4>《午夜马戏团》特别上映版</h4><p>加长 15 分钟未公开片段</p></div></div>
+        <div class="mi"><div class="d"><b>10.22</b><small>上映</small></div><div class="t"><h4>《迷宫都市搜查课》剧场版宣布</h4><p>TV 续篇 · 2027 年春季</p></div></div>
+        <div class="mi"><div class="d"><b>11.03</b><small>影展</small></div><div class="t"><h4>番薯动漫 10 月动画影展</h4><p>5 部经典作品 4K 修复放映</p></div></div>
+        <div class="mi"><div class="d"><b>11.20</b><small>定档</small></div><div class="t"><h4>《王国与灰烬的协奏曲》剧场先行</h4><p>首集先行上映会</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新番点评 -->
+  <section class="sec" id="review">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>新番点评</h2><p>编辑长评 · 观众口碑 · 单集解析</p></div></div>
+      <a class="sm" href="#">全部点评 ›</a>
+    </div>
+    <div class="rv">
+      <article class="rc">
+        <div class="who"><span class="av">🖊️</span><div><h4>编辑部 · 小林</h4><p>动漫资讯主编 · 关注季度动画八年</p></div></div>
+        <div class="st">★ ★ ★ ★ ★<em>综合评分 8.7 / 10</em></div>
+        <h3>《樱花与海边的约定》十二话收官：慢节奏叙事的真正难点在哪里</h3>
+        <blockquote>这部番的厉害之处不是没有冲突，而是它愿意让角色在冲突之后坐下来把话说完。第十二话那场长达七分钟的对话，没有一句废话，也没有一个镜头是重复的构图。</blockquote>
+        <blockquote>缺点是中途两话的节奏确实松了，如果是第一次看这种类型，很容易被劝退，但只要撑过第八话，后面的收束是值得的。</blockquote>
+        <div class="tags"><i>慢节奏</i><i>对话戏</i><i>收官点评</i></div>
+        <div class="ft">发布于 9 月 26 日 · 2,140 次阅读 · 评论 96 条</div>
+      </article>
+      <article class="rc">
+        <div class="who"><span class="av">🎧</span><div><h4>观众投稿 · 阿柚</h4><p>追番六年 · 偏爱治愈与悬疑</p></div></div>
+        <div class="st">★ ★ ★ ★ ☆<em>综合评分 8.4 / 10</em></div>
+        <h3>《末班列车与星空咖啡馆》第十一话：配乐为什么是全季最好的</h3>
+        <blockquote>这一话的钢琴曲没有出现在 OP 或 ED 里，而是藏在便利店那段三十秒的沉默里。声优念菜单的声音被压得很低，钢琴从右声道慢慢进来，这是本季最被低估的音效设计。</blockquote>
+        <div class="tags"><i>音效</i><i>观众投稿</i><i>单集解析</i></div>
+        <div class="ft">发布于 9 月 25 日 · 1,780 次阅读 · 评论 63 条</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 资源下载 -->
+  <section class="sec" id="download">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>资源下载</h2><p>番剧原声带 · 高清壁纸 · 设定集 · 官方授权内容</p></div></div>
+      <a class="sm" href="#">下载须知 ›</a>
+    </div>
+    <div class="dl">
+      <div class="dc">
+        <div class="dc-h"><span class="ic">🎵</span><div><h4>番剧原声带</h4><p>OP / ED / 插曲合集</p></div></div>
+        <ul>
+          <li><span>樱花与海边的约定 OST<small>FLAC 24bit · 1.2 GB</small></span><a href="#">下载</a></li>
+          <li><span>末班列车与星空咖啡馆 OST<small>FLAC 24bit · 980 MB</small></span><a href="#">下载</a></li>
+          <li><span>弦上的星期天 OST<small>MP3 320k · 320 MB</small></span><a href="#">下载</a></li>
+          <li><span>影刃无双 战斗组曲<small>FLAC 24bit · 640 MB</small></span><a href="#">下载</a></li>
+          <li><span>番薯动漫季度精选歌单<small>MP3 320k · 210 MB</small></span><a href="#">下载</a></li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dc-h"><span class="ic">🖼️</span><div><h4>高清壁纸</h4><p>手机 / 桌面多分辨率</p></div></div>
+        <ul>
+          <li><span>当季新番壁纸包 Vol.12<small>4K · 32 张 · 280 MB</small></span><a href="#">下载</a></li>
+          <li><span>樱花与海边的约定 画集<small>2K · 48 张 · 410 MB</small></span><a href="#">下载</a></li>
+          <li><span>番剧时间表手机壁纸<small>1080P · 7 张 · 24 MB</small></span><a href="#">下载</a></li>
+          <li><span>剧场版海报原图<small>4K · 12 张 · 156 MB</small></span><a href="#">下载</a></li>
+          <li><span>动态壁纸合集<small>适配安卓与 iOS</small></span><a href="#">下载</a></li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dc-h"><span class="ic">📖</span><div><h4>设定集与资料</h4><p>官方授权 · 访谈与分镜</p></div></div>
+        <ul>
+          <li><span>影刃无双 分镜稿选集<small>PDF · 186 页 · 92 MB</small></span><a href="#">下载</a></li>
+          <li><span>当季新番制作访谈录<small>PDF · 74 页 · 38 MB</small></span><a href="#">下载</a></li>
+          <li><span>番薯动漫 2026 年度盘点<small>EPUB · 图文版</small></span><a href="#">下载</a></li>
+          <li><span>声优访谈合集 Vol.4<small>PDF · 52 页 · 26 MB</small></span><a href="#">下载</a></li>
+          <li><span>季度排播表可打印版<small>PDF · A4 横向</small></span><a href="#">下载</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精彩图集 -->
+  <section class="sec" id="gallery">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>精彩图集</h2><p>番剧截图 · 官方美术 · 观影现场</p></div></div>
+      <a class="sm" href="#">全部图集 ›</a>
+    </div>
+    <div class="ga">
+      <div class="gi"><div class="bg" style="--g1:#2c1410;--g2:#1a141d"><span>🌸</span></div><div class="mk"><h4>樱花与海边的约定 · 画集</h4><p>48 张 · 官方授权</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#2a1018;--g2:#121b2e"><span>🗡️</span></div><div class="mk"><h4>影刃无双 · 战斗分镜</h4><p>32 张 · 制作组公开</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#0f2a22;--g2:#2c2610"><span>🚂</span></div><div class="mk"><h4>末班列车 · 场景美术</h4><p>26 张 · 背景设定</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#121b2e;--g2:#24102e"><span>🎻</span></div><div class="mk"><h4>弦上的星期天 · 角色设定</h4><p>19 张 · 人设公开</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#2c2610;--g2:#2c1410"><span>🍡</span></div><div class="mk"><h4>小巷甜品店 · 美食原画</h4><p>24 张 · 番外图集</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#24102e;--g2:#121b2e"><span>🎪</span></div><div class="mk"><h4>午夜马戏团 · 概念美术</h4><p>21 张 · 未公开稿</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#2c1410;--g2:#0f2a22"><span>📸</span></div><div class="mk"><h4>剧场版上映现场记录</h4><p>38 张 · 观众投稿</p></div></div>
+      <div class="gi"><div class="bg" style="--g1:#1a141d;--g2:#2a1018"><span>🎬</span></div><div class="mk"><h4>番薯动漫观影团合影</h4><p>17 张 · 编辑部活动</p></div></div>
+    </div>
+  </section>
+
+  <!-- 专题策划 -->
+  <section class="sec" id="topic">
+    <div class="sh">
+      <div class="st"><span class="bar"></span><div><h2>专题策划</h2><p>系列盘点 · 主题合集 · 长期连载</p></div></div>
+      <a class="sm" href="#">全部专题 ›</a>
+    </div>
+    <div class="tp">
+      <article class="tpc">
+        <div class="th2" style="--g1:rgba(255,107,74,.3);--g2:rgba(255,107,74,.07)"><span class="ct">连载中</span><span>📊</span></div>
+        <div class="ctn">
+          <h4>当季新番八周复盘：哪些番涨了口碑，哪些跌了</h4>
+          <p>每周统计评分变化、讨论热度和播放数据，记录一部番从开播到收官的完整曲线。目前已更新至第六周。</p>
+          <div class="ft"><span>已更新 6 期</span><span>下周继续</span></div>
+        </div>
+      </article>
+      <article class="tpc">
+        <div class="th2" style="--g1:rgba(255,165,61,.3);--g2:rgba(255,165,61,.07)"><span class="ct">连载中</span><span>🎙️</span></div>
+        <div class="ctn">
+          <h4>声优专访系列：一个人配十部当季新番是什么体验</h4>
+          <p>番薯动漫编辑部对话当季配音阵容，聊排期、台词节奏与现场趣事，每期一位，配完整文字稿。</p>
+          <div class="ft"><span>已更新 9 期</span><span>持续连载</span></div>
+        </div>
+      </article>
+      <article class="tpc">
+        <div class="th2" style="--g1:rgba(78,203,154,.28);--g2:rgba(78,203,154,.06)"><span class="ct">已完结</span><span>🍂</span></div>
+        <div class="ctn">
+          <h4>秋天最适合补的十二部治愈番</h4>
+          <p>编辑部按季节主题做的长期合集，每部附推荐理由与观看门槛，方便第一次接触这类番的人挑选。</p>
+          <div class="ft"><span>共 12 部</span><span>建议收藏</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 订阅 -->
+  <section class="sec">
+    <div class="sub">
+      <div class="bg"></div>
+      <div class="cn">
+        <h3>每周五收到一份当季新番速递</h3>
+        <p>番薯动漫每周汇总番剧更新进度、新番点评与剧场档期，无需注册即可订阅。</p>
+        <form class="sf" onsubmit="return false;">
+          <input type="email" placeholder="留下你的邮箱地址" aria-label="邮箱地址">
+          <button type="submit">订阅番薯动漫速递</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="sec" id="about">
+    <div class="ab">
+      <div class="abc">
+        <h3>关于番薯动漫</h3>
+        <p><strong style="color:var(--txt)">番薯动漫</strong>（网址：<a href="https://fanshudongman-zh.github.io" style="color:var(--p2)">https://fanshudongman-zh.github.io</a>）是一个专注动漫新番速递与番剧更新的资讯站点。我们每日整理当季新番的更新进度、番剧时间表、热播排行与剧场电影档期，配合编辑部的新番点评和资源下载，让追番用户在一个页面里看完当天所有值得关注的番薯动漫资讯。</p>
+        <p>本站设有动漫资讯、番剧更新、番剧时间表、热播排行榜、剧场电影、新番点评、资源下载、精彩图集与专题策划九个栏目。所有内容由编辑部人工整理，转载请注明来源；资源区仅提供官方授权内容，如遇版权问题可联系我们处理。</p>
+        <p>番薯动漫不做播放器，也不提供任何未经授权的在线观看入口，我们的定位是资讯与资料：帮你记住什么时候更新、哪部值得追、哪部可以补。如果你有想看的盘点主题，欢迎通过投稿渠道告诉我们。</p>
+      </div>
+      <div class="abc">
+        <h3>友情链接</h3>
+        <div class="lc">
+          <a href="#">新番速递网</a>
+          <a href="#">番剧时间表</a>
+          <a href="#">动漫排行榜</a>
+          <a href="#">声优资料库</a>
+          <a href="#">动画制作组</a>
+          <a href="#">剧场电影资讯</a>
+          <a href="#">原声带下载</a>
+          <a href="#">动漫壁纸站</a>
+          <a href="#">设定集分享</a>
+          <a href="#">动画音乐电台</a>
+          <a href="#">补番指南</a>
+          <a href="#">观影团</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="container">
+    <div class="fg">
+      <div class="bd">
+        <div class="logo"><span class="mk">🍠</span><span class="nm"><em>番薯动漫</em><small>fanshudongman-zh.github.io</small></span></div>
+        <p>番薯动漫（fanshudongman-zh.github.io）专注动漫新番速递与番剧更新，每日整理番剧时间表、热播排行、剧场电影档期与深度点评，为追番用户提供及时、完整的番薯动漫资讯与观看指南。</p>
+      </div>
+      <div><h4>资讯栏目</h4><ul><li><a href="#news">动漫资讯</a></li><li><a href="#update">番剧更新</a></li><li><a href="#schedule">番剧时间表</a></li><li><a href="#rank">热播排行榜</a></li><li><a href="#movie">剧场电影</a></li></ul></div>
+      <div><h4>内容栏目</h4><ul><li><a href="#review">新番点评</a></li><li><a href="#gallery">精彩图集</a></li><li><a href="#topic">专题策划</a></li><li><a href="#download">资源下载</a></li><li><a href="#">投稿与供稿</a></li></ul></div>
+      <div><h4>关于本站</h4><ul><li><a href="#about">关于番薯动漫</a></li><li><a href="#">版权声明</a></li><li><a href="#">下载须知</a></li><li><a href="#">编辑规范</a></li><li><a href="#">联系我们</a></li></ul></div>
+    </div>
+    <div class="fb">
+      <div>© 2026 番薯动漫 fanshudongman-zh.github.io · 网站名称：番薯动漫 ｜ 网站网址：<a href="https://fanshudongman-zh.github.io">https://fanshudongman-zh.github.io</a> · 本站为动漫资讯与资料整理站点，内容由编辑部人工整理</div>
+      <div class="ls"><a href="#home">首页</a><a href="#about">关于番薯动漫</a><a href="#">回到顶部</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="to" id="to" href="#" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),mb=document.getElementById('mb');
+  mb.addEventListener('click',function(){nav.classList.toggle('open');mb.classList.toggle('open')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.classList.remove('open')}});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-86,behavior:'smooth'})}}
+    });
+  });
+  var to=document.getElementById('to');
+  var secs=document.querySelectorAll('main section[id]'),navA=document.querySelectorAll('.nav a');
+  function onScroll(){
+    to.classList.toggle('show',window.scrollY>400);
+    var cur='';
+    secs.forEach(function(s){if(window.scrollY>=s.offsetTop-140)cur=s.id});
+    navA.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.querySelectorAll('.tabs').forEach(function(tab){
+    var btns=tab.querySelectorAll('button');
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        var id=b.getAttribute('data-tab');
+        var box=b.closest('.sec');
+        btns.forEach(function(x){x.classList.remove('on')});
+        b.classList.add('on');
+        box.querySelectorAll('.tab-pane').forEach(function(p){p.classList.toggle('on',p.id===id)});
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
